@@ -1,0 +1,23 @@
+id: startTrigger
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  map:
+    query: |-
+      return {
+        "items_per_page": 1,
+        "total_pages": 3
+      }
+createdAt: 2024-12-23T19:14:52.691Z
+blockData:
+  top: -416
+  left: 32
+  uuid: 7cac89a9-379f-4b2a-b194-c341f3754180
+  options: {}
+  pluginId: startTrigger
+  blockType: webhook
+  editorType: JavascriptQuery
+  isMinimized: false
+  resourceName: webhook
+  incomingOnSuccessEdges: []

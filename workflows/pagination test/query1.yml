@@ -1,0 +1,111 @@
+id: query1
+type: datasource
+subtype: JavascriptQuery
+resourceName: JavascriptQuery
+template:
+  queryRefreshTime: ''
+  allowedGroupIds: []
+  streamResponse: false
+  lastReceivedFromResourceAt: null
+  isFunction: false
+  functionParameters: null
+  queryDisabledMessage: ''
+  servedFromCache: false
+  offlineUserQueryInputs: ''
+  functionDescription: null
+  successMessage: ''
+  queryDisabled: ''
+  playgroundQuerySaveId: latest
+  workflowParams: null
+  resourceNameOverride: ''
+  runWhenModelUpdates: false
+  workflowRunExecutionType: sync
+  showFailureToaster: true
+  query: |-
+    const results = []
+    let start_page = 0
+
+    for (const [index, value] of set_up_array.data.entries()) {
+      
+      const items_per_page = startTrigger.data.items_per_page
+      const result = await query1_lambda.trigger()
+
+      results.push(...result)
+
+      start_page = result[result.length - 1].id 
+      
+    }
+
+    return results
+  playgroundQueryUuid: ''
+  playgroundQueryId: null
+  error: null
+  workflowRunBodyType: raw
+  privateParams: []
+  queryRunOnSelectorUpdate: false
+  runWhenPageLoadsDelay: ''
+  data: null
+  importedQueryInputs:
+    ordered: []
+  _additionalScope: []
+  isImported: false
+  showSuccessToaster: true
+  cacheKeyTtl: ''
+  requestSentTimestamp: null
+  metadata: null
+  queryRunTime: null
+  changesetObject: ''
+  offlineOptimisticResponse: null
+  errorTransformer: return data.error
+  finished: null
+  confirmationMessage: null
+  isFetching: false
+  changeset: ''
+  rawData: null
+  queryTriggerDelay: '0'
+  resourceTypeOverride: null
+  watchedParams: []
+  enableErrorTransformer: false
+  isHidden: false
+  showLatestVersionUpdatedWarning: false
+  timestamp: 0
+  evalType: script
+  importedQueryDefaults:
+    ordered: []
+  enableTransformer: false
+  showUpdateSetValueDynamicallyToggle: true
+  overrideOrgCacheForUserCache: false
+  runWhenPageLoads: false
+  transformer: return data
+  events: []
+  queryTimeout: '10000'
+  workflowId: null
+  requireConfirmation: false
+  queryFailureConditions: ''
+  changesetIsObject: false
+  enableCaching: false
+  allowedGroups: []
+  offlineQueryType: None
+  queryThrottleTime: '750'
+  updateSetValueDynamically: false
+  notificationDuration: ''
+createdAt: 2025-01-02T18:43:08.171Z
+blockData:
+  top: -416
+  left: 928
+  uuid: 89d2701f-0417-4404-8126-db683aaea0eb
+  options:
+    to: dd5e89b9-4efc-4f59-a1d5-bc4f289ecadc
+    from: d0e2f6da-cdce-42d8-a4b6-b12b2ce9d353
+    forEachUIType: code
+  pluginId: query1
+  blockType: forEach
+  dimensions:
+    width: 720
+    height: 437
+  editorType: JavascriptQuery
+  onboarding: false
+  isMinimized: false
+  resourceName: JavascriptQuery
+  incomingOnSuccessEdges:
+    - d0e2f6da-cdce-42d8-a4b6-b12b2ce9d353
